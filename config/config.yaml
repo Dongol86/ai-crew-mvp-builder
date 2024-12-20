@@ -1,0 +1,26 @@
+model:
+  model:
+  provider: "ollama"
+  model_name: "llama3.2"
+  temperature: 0.7
+
+agents:
+  strategic_lead:
+    role: "Product Strategy and Vision"
+    tools: ["market_research", "roadmap_generator", "requirement_analyzer"]
+
+  growth_strategist:
+    role: "Growth and GTM Strategy"
+    tools: ["seo_analyzer", "funnel_designer", "market_analyzer"]
+
+  ux_designer:
+    role: "UX Research and Design"
+    tools: ["wireframe_generator", "user_research", "prototype_builder"]
+
+  tech_architect:
+    role: "Technical Architecture"
+    tools: ["api_designer", "db_schema_generator", "system_architect"]
+
+  devops_specialist:
+    role: "DevOps and Security"
+    tools: ["security_analyzer", "infrastructure_planner", "monitoring_setup"]
