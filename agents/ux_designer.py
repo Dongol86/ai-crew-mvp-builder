@@ -1,9 +1,9 @@
 from .base_agent import BaseAgent
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+from typing import Optional, Any
 
 class UXDesigner(BaseAgent):
-    def __init__(self, llm=None):
+    def __init__(self, llm: Optional[Any] = None):
         super().__init__(
             name="UX Designer",
             role="UX Research and Design",
@@ -42,8 +42,4 @@ class UXDesigner(BaseAgent):
         )
         
     def _execute_task(self, context):
-        chain = LLMChain(
-            llm=self.llm,
-            prompt=self.prompt_template
-        )
-        return chain.run(task=context['task'], context=str(context['memory']))
+        return super()._execute_task(context)
